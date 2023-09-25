@@ -1,0 +1,4 @@
+--I did not made any of these textures, I just downloaded them and uploaded them to save you time, pls like this model I took me 2 straight days :')--
+--No hice ninguna de estas texturas, solo las descargué y las subí para ahorrarte tiempo, por favor, dale like este modelo, me tomé 2 días seguidos: ')--
+--Eu não fiz nenhuma dessas texturas, apenas baixei e subi para economizar seu tempo, por favor goste deste modelo, levei 2 dias seguidos: ')--
+--Je n'ai fait aucune de ces textures, je les ai juste téléchargées et mises en ligne pour vous faire gagner du temps, s'il vous plaît aimez ce modèle, j'ai pris 2 jours d'affilée :')--
