@@ -144,7 +144,6 @@ events.AreaEffect.OnServerEvent:Connect(function(player, effectType, proj, pos)
 		ex.DestroyJointRadiusPercent = 0
 		ex.Parent = game.Workspace
 		
-		--[[
 		for i, v in pairs(raceInfo.RacersTable) do
 			if v then
 				local plr = game.Players[i]
@@ -158,7 +157,7 @@ events.AreaEffect.OnServerEvent:Connect(function(player, effectType, proj, pos)
 					events.AreaEffect:FireClient(plr, effectType, pos)
 				end
 			end
-		end]]
+		end
 	end
 	
 	if (proj) then

@@ -21,7 +21,7 @@ local DRIFT = config["Drift"] / 25
 local MINI_TURBO = config["Mini_Turbo"]
 
 local player = game.Players.LocalPlayer
-local plrInfo = game.ReplicatedStorage["Player Info"]:WaitForChild(player.Name)
+local plrInfo = game.ReplicatedStorage["Player Info"][player.Name]
 
 local ball = model.Ball
 local seat = model.VehicleSeat

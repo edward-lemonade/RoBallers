@@ -42,23 +42,23 @@ function startRace()
 		v:Destroy()
 	end
 
+	--events.RaceStart:FireAllClients()
 	local index = 0
 	for i,v in pairs(game.Players:GetChildren()) do
 		local plr = v
 	
 		if (plr.PlayerGui:FindFirstChild("OptOut") and not plr.PlayerGui.OptOut.Value) then
+			events.RaceStart:FireClient(plr)
 			index += 1
 			local info = game.ReplicatedStorage["Player Info"].Dummy:Clone()
 			info.Parent = game.ReplicatedStorage["Player Info"]
 			info.Name = plr.Name
-			--[[
+
 			local ball = vehicleModule.SpawnBall(plr.Name, plr.PlayerGui["Vehicle Type"].Value)
 			ball:SetPrimaryPartCFrame(game.Workspace.Map["Start Spots"][index].CFrame)
 			ball.Parent = game.Workspace
-			]]
 			
 			raceInfo.RacersTable[plr.Name] = true
-			events.RaceStart:FireClient(plr)
 			
 			placementCountEvent:FireClient(plr, {}, index)
 		end
@@ -70,10 +70,9 @@ function startRace()
 	
 	if (raceInfo.Racers ~= 0) then
 		wait(3)
-		--[[
 		for i,v in raceInfo.RacersTable do
 			vehicleModule.lockMovement(game.Players[i].Vehicle.Value, false)
-		end]]
+		end
 	else
 		raceInfo.GameEnded = true
 		lobbyScreenGui.RaceCountdown.Text = "Skipping race..."
@@ -123,7 +122,9 @@ function startRace()
 		local plr = game.Players:FindFirstChild(i)
 		
 		if (v) then
+			local val = plr.Vehicle.Value
 			plr.PlayerGui.DriverControls:Destroy()
+			val:Destroy()
 			plr.Vehicle:Destroy()
 			plr.PlayerGui.RaceGui.Enabled = false
 

@@ -55,10 +55,9 @@ end
 
 function module.ToggleEffect(obj, mode)
 	local currentMode = obj.Enabled
-	--[[
 	if (mode ~= currentMode) then
 		game.ReplicatedStorage.Events.ToggleEffect:FireServer(obj, mode)
-	end]]
+	end
 	obj.Enabled = mode
 end
 

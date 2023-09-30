@@ -118,7 +118,7 @@ itemFuncs["Turret"] = {
 		mouse.TargetFilter = model
 		
 		H_.modelTransparency(model.Weapons.Turret, 0)
-		--events.ToggleTransparency:FireServer(model.Weapons.Turret, 0)
+		events.ToggleTransparency:FireServer(model.Weapons.Turret, 0)
 		
 		func1 = function()
 			checkForDeath()
@@ -230,7 +230,7 @@ itemFuncs["Turret"] = {
 		mouse.TargetFilter = nil
 		func1 = nilFunc
 		H_.modelTransparency(model.Weapons.Turret, 1)
-		--events.ToggleTransparency:FireServer(model.Weapons.Turret, 1)
+		events.ToggleTransparency:FireServer(model.Weapons.Turret, 1)
 	end,
 }
 itemFuncs["Rockets"] = {
@@ -238,7 +238,7 @@ itemFuncs["Rockets"] = {
 		mouse.TargetFilter = model
 		
 		H_.modelTransparency(model.Weapons.Rockets, 0)
-		--events.ToggleTransparency:FireServer(model.Weapons.Rockets, 0)
+		events.ToggleTransparency:FireServer(model.Weapons.Rockets, 0)
 
 		func1 = function()
 			checkForDeath()
@@ -263,7 +263,7 @@ itemFuncs["Rockets"] = {
 		local id = itemMod.count("Rockets") - M.itemCount + 1
 		
 		H_.modelTransparency(model.Weapons.Rockets["Rocket"..id], 1)
-		--events.ToggleTransparency:FireServer(model.Weapons.Rockets["Rocket"..id], 1)
+		events.ToggleTransparency:FireServer(model.Weapons.Rockets["Rocket"..id], 1)
 		
 		local rocket = game.ReplicatedStorage.Events.CreateClientObject:InvokeServer("Rocket")
 		rocket.PrimaryPart.CFrame = model.Weapons.Rockets["Rocket"..id].PrimaryPart.CFrame
@@ -340,7 +340,7 @@ itemFuncs["Rockets"] = {
 		func1 = nilFunc
 		
 		H_.modelTransparency(model.Weapons.Rockets, 1)
-		--events.ToggleTransparency:FireServer(model.Weapons.Rockets, 1)
+		events.ToggleTransparency:FireServer(model.Weapons.Rockets, 1)
 	end,
 }
 

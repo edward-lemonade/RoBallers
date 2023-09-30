@@ -44,7 +44,7 @@ seat.Changed:Connect(function(property)
 			folder["Local Handler"].Disabled = false
 			
 			vehicleMod.lockMovement(ball.Parent, true)
-			--ball:SetNetworkOwner(driver)
+			ball:SetNetworkOwner(driver)
 		end
 	end	
 end)
@@ -56,7 +56,7 @@ driver.Character.Humanoid.JumpPower = 0
 wait()
 
 seat:Sit(driver.Character.Humanoid)
-repeat wait() until driver.Character.Humanoid.Sit == true
+--repeat wait() until driver.Character.Humanoid.Sit == true
 --ball:SetNetworkOwner(driver)
 
 function onTouched(obj)
@@ -166,7 +166,7 @@ function death(cause)
 	model.CamPartRev.Anchored = false
 	
 
-	--ball:SetNetworkOwner(driver)
+	ball:SetNetworkOwner(driver)
 	touchConnection = model.Ball.Touched:Connect(onTouched)
 end
 

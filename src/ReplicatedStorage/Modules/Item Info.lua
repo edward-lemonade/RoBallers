@@ -9,7 +9,7 @@ module.T = {
 	["Spike Traps"] =	{0.75,	3,		-1,		0, 		false},
 
 	["Turret"] = 		{0.5,  	40,		-1,		1/8, 	true},
-	["Rockets"] = 		{0.5*10000,	2,		-1, 		0,		false},
+	["Rockets"] = 		{0.5,	2,		-1, 		0,		false},
 }
 
 module.Specs = {

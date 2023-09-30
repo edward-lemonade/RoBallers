@@ -5,7 +5,6 @@ local SoundService = game:GetService("SoundService")
 
 local modules = game.ReplicatedStorage.Modules
 local gameMod = require(modules["Game Module"])
-local vehicleMod = require(modules["Vehicle Module"])
 
 local plr = game.Players.LocalPlayer
 local char = plr.Character
@@ -19,24 +18,6 @@ raceGui.Enabled = false
 lobbyGui.Enabled = true
 
 events.RaceStart.OnClientEvent:Connect(function()
-	local ball = vehicleMod.SpawnBall(game.Players.LocalPlayer.Name, "Standard Ball")
-	ball:SetPrimaryPartCFrame(game.Workspace.Map["Start Spots"][1].CFrame)
-	ball.Parent = game.Workspace
-	
-	local folder = ball.Scripts.DriverControls:Clone()
-	folder.Parent = plr.PlayerGui
-
-	folder.Vehicle.Value = ball
-	folder.Vehicle.Parent = plr
-
-	folder.Server.Disabled = false
-	folder.DriverScript.Disabled = false
-	folder.ItemScript.Disabled = false
-	folder["Local Handler"].Disabled = false
-
-	vehicleMod.lockMovement(ball, true)
-	
-	----------------------------------
 	lobbyGui.Enabled = false
 	
 	game.Workspace.CurrentCamera.CameraType = Enum.CameraType.Scriptable
@@ -79,9 +60,6 @@ events.RaceStart.OnClientEvent:Connect(function()
 	countdownImage.ImageTransparency = 0
 	
 	countdownImage.Visible = false
-	
-	---------------------------------------------------------------------------
-	vehicleMod.lockMovement(ball, false)
 end)
 
 events.RaceEnd.OnClientEvent:Connect(function()
