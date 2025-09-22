@@ -5,7 +5,7 @@ Roblox at: https://www.roblox.com/games/9644420194/RoBallers
 
 ![RoBallers Track Design](web-site-images/RoballerTrackDesign.png "Roballer Track Design")
 
-Development began in 2021 and is continuing to this day.
+Development began in 2021 and has been on hiatus since 2023.
 
 ## Roblox Platform
 
